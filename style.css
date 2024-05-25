@@ -1,0 +1,71 @@
+.wrap {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+* {
+    padding: 10px;
+    margin: 10px;
+    flex: 1 100%;
+    border-radius: 10px;
+}
+
+.header {
+    background: blue;
+    height: 120px;
+    border-color: black;
+}
+
+.footer {
+    background: green;
+    height: 80px;
+}
+
+.main {
+    text-align: left;
+    background: red;
+    height: 300px;
+    font-size: 24px;
+}
+.main p{
+    font-size: large;
+    text-align: center;
+    font-weight: 5000;
+}
+
+.side1 {
+    background: yellow;
+}
+
+.side2 {
+    background: orange;
+}
+
+@media all and (min-width: 800px) {
+    .main {
+        flex: 3;
+    }
+
+    .side1 {
+        order: 1;
+    }
+
+    .side2 {
+        order: 2;
+    }
+
+    .main {
+        order: 2;
+    }
+
+    .footer {
+        order: 4;
+    }
+}
+
+@media all and (min-width: 600px) {
+    side {
+        flex: 1;
+    }
+}
